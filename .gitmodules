@@ -1,0 +1,9 @@
+[submodule "src/common"]
+	path = src/common
+	url = https://github.com/rraafays/common.nix.git
+[submodule "src/shell"]
+	path = src/shell
+	url = https://github.com/rraafays/shell.nix.git
+[submodule "src/editor"]
+	path = src/editor
+	url = https://github.com/rraafays/editor.nix.git
