@@ -7,3 +7,21 @@
 [submodule "src/editor"]
 	path = src/editor
 	url = https://github.com/rraafays/editor.nix.git
+[submodule "src/system"]
+	path = src/system
+	url = https://github.com/rraafays/system.nix.git
+[submodule "src/beets"]
+	path = src/beets
+	url = https://github.com/rraafays/beets.nix.git
+[submodule "src/slskd"]
+	path = src/slskd
+	url = https://github.com/rraafays/slskd.nix.git
+[submodule "src/storage"]
+	path = src/storage
+	url = https://github.com/rraafays/storage.nix.git
+[submodule "src/media-tools"]
+	path = src/media-tools
+	url = https://github.com/rraafays/media-tools.nix.git
+[submodule "src/transmission"]
+	path = src/transmission
+	url = https://github.com/rraafays/transmission.nix.git
