@@ -5,6 +5,9 @@
   ...
 }:
 
+let
+  user = config.common.username;
+in
 {
   imports = [
     ./hardware-configuration.nix
@@ -28,12 +31,6 @@
   services.libinput.enable = lib.mkForce false;
   services.pipewire.enable = lib.mkForce false;
 
-  services.beets.enable = true;
-  services.transmissionClient.enable = true;
-  services.slskdClient.enable = true;
-  services.storage.enable = true;
-  services.mediaTools.enable = true;
-
   boot = {
     kernelPackages = pkgs.linuxPackages_latest;
     loader = {
@@ -48,9 +45,9 @@
     firewall.enable = true;
   };
 
-  users.users.raf = {
+  users.users.${user} = {
     isNormalUser = true;
-    description = "raf";
+    description = user;
     extraGroups = [
       "networkmanager"
       "wheel"

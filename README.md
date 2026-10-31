@@ -29,7 +29,9 @@ Edit `secrets.nix` (gitignored) before `nixos-rebuild`.
 | `src/storage` | [`storage.nix`](https://github.com/rraafays/storage.nix) |
 | `src/media-tools` | [`media-tools.nix`](https://github.com/rraafays/media-tools.nix) |
 
-Host enables `services.beets`, `services.transmissionClient`, `services.slskdClient`, `services.storage`, and `services.mediaTools`. Desktop-oriented pieces of `system.nix` (PipeWire, printing, libinput) are forced off on this host.
+Feature stacks under `src/beets`, `src/transmission`, `src/slskd`, `src/storage`, and `src/media-tools` are **on when imported**; the host file sets overrides only (paths, secrets, disabling desktop bits from `system.nix`). See [docs/rules/nix-modules.md](docs/rules/nix-modules.md).
+
+This host forces `services.printing`, `services.libinput`, and `services.pipewire` off. The primary account comes from `common.username` in `configuration.nix` (wheel, NetworkManager); there is no `user/` submodule so the server stays free of desktop app packages from `user.nix`.
 
 ## Deploy
 
